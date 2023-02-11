@@ -1,8 +1,14 @@
-function App() {
-  return (
-    <div className="app">
+import { colorModeContext, useMode } from "./theme";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 
-    </div>
+function App() {
+  const [theme, colorMode] = useMode()
+
+  return (
+    <colorModeContext.Provider value={colorMode}>
+      <div className="app">
+      </div>
+    </colorModeContext.Provider>
   );
 }
 

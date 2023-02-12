@@ -18,8 +18,17 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 
 const Sidebar = () => {
+  const theme = useTheme()
+  const colors = tokens(theme.palette.mode)
+  const [isCollapsed, setIsCollapsed] = useState(false)
+  const [selected, setSelected] = useState('Dashboard')
+
   return (
-    <div>Sidebar</div>
+    <Box sx={{"& .pro-sidebar-inner": {
+      background: `${colors.primary[400]} !important`
+    } }}>
+
+    </Box>
   )
 }
 

@@ -61,7 +61,7 @@ const Form = () => {
                                    />
                         <TextField fullWidth variant="filled" type="text" label="Email" 
                                    onBlur={handleBlur} onChange={handleChange} value={values.email} 
-                                   name="fisrtName" error={!!touched.email && !!errors.email}
+                                   name="email" error={!!touched.email && !!errors.email}
                                    helperText={touched.email && errors.email}
                                    sx={{ gridColumn: "span 4" }}
                         />

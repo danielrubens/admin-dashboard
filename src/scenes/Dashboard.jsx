@@ -4,9 +4,9 @@ import { tokens } from "../theme"
 import { mockTransactions } from "../data/mockData"
 import DownloadOutlinedICon from '@mui/icons-material/DownloadOutlined'
 import EmailIcon from '@mui/icons-material/Email'
-import PointOfSaleICon from '@mui/icons-material/PointOfSale'
-import PersonAddICon from '@mui/icons-material/PersonAdd'
-import TrafficICon from '@mui/icons-material/Traffic'
+import PointOfSaleIcon from '@mui/icons-material/PointOfSale'
+import PersonAddIcon from '@mui/icons-material/PersonAdd'
+import TrafficIcon from '@mui/icons-material/Traffic'
 import { LineChart, BarChart, GeographyChart, StatBox, ProgressCircle } from '../components/'
 
 
@@ -36,9 +36,36 @@ const Dashboard = () => {
                               <EmailIcon sx={{color: colors.greenAccent[600],  fontSize: "26px"}}/>
 
                 }/>
-
           </Box>
 
+          <Box gridColumn="span 3" backgroundColor={colors.primary[400]} 
+               display="flex" alignItems="center" justifyContent>
+                <StatBox title="431,225" subtitle="Sales obtained Sent" progress="0.55" increase="+21%" 
+                         icon={
+                              <PointOfSaleIcon sx={{color: colors.greenAccent[600],  fontSize: "26px"}}/>
+
+                }/>
+          </Box>
+
+          <Box gridColumn="span 3" backgroundColor={colors.primary[400]} 
+               display="flex" alignItems="center" justifyContent>
+                <StatBox title="32,441" subtitle="New Clients" progress="0.30" increase="+5%" 
+                         icon={
+                              <PersonAddIcon sx={{color: colors.greenAccent[600],  fontSize: "26px"}}/>
+
+                }/>
+          </Box>
+
+          <Box gridColumn="span 3" backgroundColor={colors.primary[400]} 
+               display="flex" alignItems="center" justifyContent>
+                <StatBox title="1,325,134" subtitle="Traffic Inbound" progress="0.80" increase="+43%" 
+                         icon={
+                              <TrafficIcon sx={{color: colors.greenAccent[600],  fontSize: "26px"}}/>
+
+                }/>
+          </Box>
+        {/* {ROW 2} */}
+        
       </Box>
     </Box>
   )

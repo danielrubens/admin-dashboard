@@ -1,5 +1,12 @@
 import Header from "../components/Header"
-import { Box } from "@mui/material"
+import { Box, Button, IconButton, Typography, useTheme } from "@mui/material"
+import { tokens } from "../theme"
+import { mockTransactions } from "../data/mockData"
+import DownloadOutlinedICon from '@mui/icons-material/DownloadOutlined'
+import EmailICon from '@mui/icons-material/Email'
+import PointOfSaleICon from '@mui/icons-material/PointOfSale'
+import PersonAddICon from '@mui/icons-material/PersonAdd'
+import TrafficICon from '@mui/icons-material/Traffic'
 
 const Dashboard = () => {
   return (

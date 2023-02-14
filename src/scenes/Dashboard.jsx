@@ -7,6 +7,8 @@ import EmailICon from '@mui/icons-material/Email'
 import PointOfSaleICon from '@mui/icons-material/PointOfSale'
 import PersonAddICon from '@mui/icons-material/PersonAdd'
 import TrafficICon from '@mui/icons-material/Traffic'
+import { LineChart, BarChart, GeographyChart, StatBox, ProgressCircle } from '../components/'
+
 
 const Dashboard = () => {
   return (

@@ -15,16 +15,18 @@ const Calendar = () => {
   const [currentEvents, setCurrentEvents] = useState([])
 
   const handleDateClick = (selected) => {
-    const title = prompt("Please, enter a new title for your event")
+    const title = prompt("Please enter a new title for your event");
     const calendarApi = selected.view.calendar;
-    calendarApi.unselecte()
-    if(title){
-        calendarApi.addEvent({
-            id: `${selected.dateStr}-${title}`,
-            start: selected.startStr,
-            end: selected.endStr,
-            allDay: selected.allDay
-        })
+    calendarApi.unselect();
+
+    if (title) {
+      calendarApi.addEvent({
+        id: `${selected.dateStr}-${title}`,
+        title,
+        start: selected.startStr,
+        end: selected.endStr,
+        allDay: selected.allDay,
+      });
     }
   }
 
@@ -57,7 +59,7 @@ const Calendar = () => {
                 </List>
             </Box>
             <Box flex="1 1 100%" ml="15px">
-                <FullCalendar height="75vg" plugins={[
+                <FullCalendar height="75vh" plugins={[
                     dayGridPlugin, timeGridPlugin, interactionPlugin, listPlugin
                     ]}
                     headerToolbar={{
@@ -74,8 +76,8 @@ const Calendar = () => {
                     eventClick={handleEventClick}
                     eventsSet={(events) => setCurrentEvents(events)}
                     initialEvents={[
-                        {id: "1234", title:"All-day event", date: "2022-09-14"},
-                        {id: "4321", title:"Timed event", date: "2022-09-28"}
+                        {id: "1234", title:"All-day event", date: "2023-02-15"},
+                        {id: "4321", title:"Timed event", date: "2023-02-28"}
                     ]}
                 />
 

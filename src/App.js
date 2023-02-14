@@ -7,7 +7,7 @@ import Sidebar from "./scenes/global/Sidebar";
 import Team from "./scenes/team";
 import Invoices from "./scenes/invoices";
 import Contacts from "./scenes/contacts";
-import Bar from "./components/BarChat";
+import Bar from "./components/BarChart";
 import Form from "./scenes/form";
 // import Line from "./scenes/line";
 // import Pie from "./scenes/pie";

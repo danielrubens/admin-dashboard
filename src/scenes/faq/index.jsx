@@ -10,11 +10,11 @@ const FAQ = () => {
   const theme = useTheme()
   const colors = tokens(theme.palette.mode)
 
-const createAccordion = (question, answer) => {
+const createAccordion = ({question, answer}, index) => {
     return(
-        <Accordion defaultExpanded>
+    <Accordion  key={index} defaultExpanded>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography colors={colors.greenAccent[500]} variant="h5">
+            <Typography color={colors.greenAccent[500]} variant="h5">
                 {question}
             </Typography>
         </AccordionSummary>
@@ -33,9 +33,11 @@ const faqSample = [
     {question: "Example of third question", answer: "Example of third answer"}
 ]
   return (
-    <>
-    {faqSample.map((i) => (createAccordion(i.question, i.answer)))}
-    </>
+    <Box m="20px">
+    <Header title="FAQ" subtitle="Frequently Asked Questions Page" />
+
+    {faqSample.map((i, index) => (createAccordion(i, index)))}
+    </Box>
   )
 }
 

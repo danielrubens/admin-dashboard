@@ -3,7 +3,7 @@ import { Box, Button, IconButton, Typography, useTheme } from "@mui/material"
 import { tokens } from "../theme"
 import { mockTransactions } from "../data/mockData"
 import DownloadOutlinedICon from '@mui/icons-material/DownloadOutlined'
-import EmailICon from '@mui/icons-material/Email'
+import EmailIcon from '@mui/icons-material/Email'
 import PointOfSaleICon from '@mui/icons-material/PointOfSale'
 import PersonAddICon from '@mui/icons-material/PersonAdd'
 import TrafficICon from '@mui/icons-material/Traffic'
@@ -23,6 +23,22 @@ const Dashboard = () => {
                      fontSize: "14px", fontWeight: "bold", padding: "10px 20px"}}
                      ><DownloadOutlinedICon sx={{mr: "10px"}}/>Download Reports
         </Button>
+      </Box>
+      {/* {GRID System} */}
+      <Box display="grid" gridTemplateColumns="repeat(12, 1fr)"
+           gridAutoRows="140px" gap="20px"
+        >
+          {/* {ROW 1} */}
+          <Box gridColumn="span 3" backgroundColor={colors.primary[400]} 
+               display="flex" alignItems="center" justifyContent>
+                <StatBox title="12,361" subtitle="Emails Sent" progress="0.75" increase="+14%" 
+                         icon={
+                              <EmailIcon sx={{color: colors.greenAccent[600],  fontSize: "26px"}}/>
+
+                }/>
+
+          </Box>
+
       </Box>
     </Box>
   )

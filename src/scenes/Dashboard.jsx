@@ -1,4 +1,4 @@
-import Header from "../../components/Header"
+import Header from "../components/Header"
 import { Box } from "@mui/material"
 
 const Dashboard = () => {

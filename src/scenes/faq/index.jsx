@@ -12,7 +12,7 @@ const FAQ = () => {
 
 const createAccordion = (question, answer) => {
     return(
-        <Accordion>
+        <Accordion defaultExpanded>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
             <Typography colors={colors.greenAccent[500]} variant="h5">
                 {question}

@@ -1,4 +1,3 @@
-import { TextIncreaseRounded } from '@mui/icons-material'
 import { Box, Typography, useTheme } from '@mui/material'
 import { tokens } from '../theme'
 import ProgressCircle from './ProgressCircle'
@@ -18,7 +17,7 @@ const StatBox = ({title, subtitle, icon, progress, increase}) => {
                 </Box>
                 <Box display="flex" justifyContent="space-between">
                     <Typography variant="h5" sx={{color: colors.greenAccent[500]}}>{subtitle}</Typography>
-                    <Typography variant="h5" fontWeight="italic" sc={{color: colors.greenAccent[600]}}>{TextIncreaseRounded}</Typography>
+                    <Typography variant="h5" fontWeight="italic" sc={{color: colors.greenAccent[600]}}>{increase}</Typography>
                 </Box>
             </Box>
         </Box>

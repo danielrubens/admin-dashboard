@@ -1,15 +1,3 @@
-// import Header from "../components/Header"
-// import { Box } from "@mui/material"
-// import { Box, Button, IconButton, Typography, useTheme } from "@mui/material"
-// import { tokens } from "../theme"
-// import { mockTransactions } from "../data/mockData"
-// import DownloadOutlinedICon from '@mui/icons-material/DownloadOutlined'
-// import EmailICon from '@mui/icons-material/Email'
-// import PointOfSaleICon from '@mui/icons-material/PointOfSale'
-// import PersonAddICon from '@mui/icons-material/PersonAdd'
-// import TrafficICon from '@mui/icons-material/Traffic'
-// import { LineChart, BarChart, GeographyChart, StatBox, ProgressCircle } from '../components/'
-
 import { Box, Button, IconButton, Typography, useTheme } from "@mui/material"
 import { tokens } from "../theme"
 import { mockTransactions } from "../data/mockData"
@@ -27,8 +15,8 @@ const Dashboard = () => {
     <Box m="20px">
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
-
-        <Box>
+      </Box>
+      <Box>
           <Button
             sx={{
               backgroundColor: colors.blueAccent[700],
@@ -41,7 +29,17 @@ const Dashboard = () => {
             <DownloadOutlinedIcon sx={{ mr: "10px" }} />
             Download Reports
           </Button>
-        </Box>
+      </Box>
+      
+      <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gridAutoRows="140px" gap="20px">
+            {/* ROW 1 */}
+            <Box gridColumn="span3" backgroundColor={colors.primary[400]} display="flex" alignItems="center" justifyContent="center">
+              <StatBox title="12,361" subtitle="Email sent" progress="0.75" increase="+14%" icon={
+                <EmailIcon sx={{color: colors.greenAccent[600], fontSize: "26px" }}/>
+              }>
+
+              </StatBox>
+            </Box>   
       </Box>
     </Box>
   )

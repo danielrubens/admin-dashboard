@@ -247,7 +247,7 @@ const Dashboard = () => {
             fontWeight="600"
             sx={{ padding: "30px 30px 0 30px" }}
           >
-            Sales Quantity
+            Denial Reason
           </Typography>
           <Box height="250px" mt="-20px">
             <BarChart isDashboard={true} />

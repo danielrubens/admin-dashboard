@@ -162,7 +162,7 @@ const Sidebar = () => {
               Pages
             </Typography>
             <Item
-              title="Profile Form"
+              title="Proforma Data Points"
               to="/form"
               icon={<PersonOutlinedIcon />}
               selected={selected}

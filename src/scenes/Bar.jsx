@@ -5,7 +5,7 @@ import BarChart from "../components/BarChart";
 const Bar = () => {
   return (
     <Box m="20px">
-      <Header title="Bar Chart" subtitle="Simple Bar Chart" />
+      <Header title="Denial Reason" subtitle="Bar chart with Denial Reason for CPTS CO58, COB7, OA18 and CO119" />
       <Box height="75vh">
         <BarChart />
       </Box>

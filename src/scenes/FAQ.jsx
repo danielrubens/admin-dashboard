@@ -28,13 +28,13 @@ const createAccordion = ({question, answer}, index) => {
 }
 
 const faqSample = [
-    {question: "Example of first question", answer: "Example of first answer"},
-    {question: "Example of second question", answer: "Example of second answer"},
-    {question: "Example of third question", answer: "Example of third answer"}
+    {question: "AR: Aging Reports missing", answer: "Aging reports not being uploaded on Sharepoint since last week. Talk to John Doe"},
+    {question: "Payment Posting: operational costs not updated", answer: "Values from Payment Posting from 2024. Does not containg the values from 2025"},
+    {question: "Availity API: payment missing", answer: "Need to add autorenew for Availity"}
 ]
   return (
     <Box m="20px">
-    <Header title="FAQ" subtitle="Frequently Asked Questions Page" />
+    <Header title="Pending items" subtitle="You have 3 pending items" />
 
     {faqSample.map((i, index) => (createAccordion(i, index)))}
     </Box>
